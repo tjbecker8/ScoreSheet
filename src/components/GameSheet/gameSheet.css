@@ -1,0 +1,34 @@
+#container {
+
+  margin: 30px;
+}
+
+.flex-top {
+  display: flex;
+  background-color: green;
+}
+
+.team-buttons {
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-bar {
+  background-color: red;
+  display: flex;
+}
+
+.goalies {
+  display: flex;
+  background-color: teal;
+}
+
+.center-main {
+  background-color: yellow;
+}
+
+.bottom-main {
+  background-color: darksalmon;
+  display: flex;
+}
