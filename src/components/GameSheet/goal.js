@@ -7,6 +7,9 @@ class Goal extends Component {
     return (
       <li class='goal-li'>
         <div class='bord-r'>
+          <p class='goal-p'>1.</p>
+        </div>
+        <div class='bord-r'>
           <p class='goal-p'>1st</p>
         </div>
         <div class='bord-r'>
