@@ -1,0 +1,24 @@
+
+
+.goal-li {
+  display: flex;
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+  width: calc(90%);
+  margin-left: 5%;
+}
+
+.goal-p {
+  margin: 4px;
+  font-size: 16px;
+  padding-left: 4;
+  padding-right: 4;
+
+}
+
+.bord-r {
+  border-right-width: thin;
+  border-right-color: black;
+  border-right-style: solid;
+}

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './gameSheet.css'
 import Skater from './skater'
+import Goal from './goal'
 
 class GameSheet extends Component {
 
@@ -125,7 +126,7 @@ class GameSheet extends Component {
             <div>
               <h3>team a goals</h3>
                 <ol>
-                  <li>goal</li>
+                  <Goal />
                   <li>goal</li>
                   <li>goal</li>
                 </ol>
