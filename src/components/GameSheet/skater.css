@@ -1,0 +1,36 @@
+.player-li {
+  display: flex;
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+  width: calc(90%);
+
+}
+
+p {
+  text-align: center;
+  margin:0;
+  padding: 0;
+
+}
+
+.number {
+  border-right: black;
+  border-right-width: thin;
+  border-right-style: solid;
+  text-align: center;
+
+}
+
+.name {
+  text-align: center;
+}
+
+li:hover {
+  background-color: purple;
+}
+
+.p-num-name {
+  font-size: 14px;
+  margin: 8px;
+}

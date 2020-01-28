@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './gameSheet.css'
+import Skater from './skater'
 
 class GameSheet extends Component {
 
@@ -97,16 +98,26 @@ class GameSheet extends Component {
           <div class='roster'>
             <h3>Roster team a</h3>
             <ul>
-              <li>player</li>
-              <li>player</li>
-              <li>player</li>
-              <li>player</li>
-              <li>player</li>
-              <li>player</li>
-              <li>player</li>
-              <li>player</li>
-              <li>player</li>
-              <li>player</li>
+              <Skater />
+              <Skater />
+              <Skater />
+              <Skater />
+              <Skater />
+              <Skater />
+              <Skater />
+              <Skater />
+              <Skater />
+              <Skater />
+              <Skater />
+              <Skater />
+              <Skater />
+              <Skater />
+              <Skater />
+              <Skater />
+              <Skater />
+              <Skater />
+              <Skater />
+              <Skater />
             </ul>
           </div>
 
@@ -151,16 +162,26 @@ class GameSheet extends Component {
           <div class='roster'>
             <h3>roster team b</h3>
               <ul>
-                <li>player</li>
-                <li>player</li>
-                <li>player</li>
-                <li>player</li>
-                <li>player</li>
-                <li>player</li>
-                <li>player</li>
-                <li>player</li>
-                <li>player</li>
-                <li>player</li>
+                <Skater />
+                <Skater />
+                <Skater />
+                <Skater />
+                <Skater />
+                <Skater />
+                <Skater />
+                <Skater />
+                <Skater />
+                <Skater />
+                <Skater />
+                <Skater />
+                <Skater />
+                <Skater />
+                <Skater />
+                <Skater />
+                <Skater />
+                <Skater />
+                <Skater />
+                <Skater />
               </ul>
           </div>
         </div>

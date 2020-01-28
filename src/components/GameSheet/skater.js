@@ -1,13 +1,18 @@
 import React, {Component} from 'react';
+import './skater.css'
 
 class Skater extends Component {
 
   render () {
 
     return (
-      <li>
-        <p>00</p>
-        <p>last, first</p>
+      <li class='player-li'>
+        <div class='number'>
+          <p class='p-num-name'>00</p>
+        </div>
+        <div class='name'>
+          <p class='p-num-name'>last, first</p>
+        </div>
       </li>
     )
   }
