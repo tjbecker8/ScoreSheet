@@ -13,15 +13,15 @@ class GameSheet extends Component {
 
 
         <div class='flex-top'>
-          <div>
+          <div class='team-name-top'>
             <h1>Team a</h1>
           </div>
 
-          <div>
+          <div class='vs'>
             <h1>VS</h1>
           </div>
 
-          <div>
+          <div class='team-name-top'>
             <h1>Team b</h1>
           </div>
         </div>
@@ -31,19 +31,19 @@ class GameSheet extends Component {
 
         <div class='main-bar'>
           <div class='team-buttons'>
-            <div>
+            <div class='goal-div'>
               <span>
                 <h2>Goal team a</h2>
               </span>
             </div>
 
-            <div>
+            <div class='goal-div'>
               <span>
                 <h2>Peanlty team a</h2>
               </span>
             </div>
 
-            <div>
+            <div class='goal-div'>
               <span>
                 <h2>save team a</h2>
               </span>
@@ -63,12 +63,12 @@ class GameSheet extends Component {
             </div>
 
             <div class='goalies'>
-              <div>
+              <div class='goalie'>
                 <h3>team a goalie</h3>
                 <h4>goalie stats</h4>
               </div>
 
-              <div>
+              <div class='goalie'>
                 <h3>team b goalie</h3>
                 <h4>goalie stats</h4>
               </div>
@@ -76,16 +76,16 @@ class GameSheet extends Component {
           </div>
 
           <div class='team-buttons'>
-            <div>
+            <div class='goal-div'>
               <h2>Goal taem b</h2>
             </div>
 
-            <div>
+            <div class='goal-div'>
               <h2>Peanlty team b</h2>
             </div>
 
-            <div>
-              <h3>save team b</h3>
+            <div class='goal-div'>
+              <h2>save team b</h2>
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@ class GameSheet extends Component {
 
 
         <div class='bottom-main'>
-          <div>
+          <div class='roster'>
             <h3>Roster team a</h3>
             <ul>
               <li>player</li>
@@ -110,7 +110,7 @@ class GameSheet extends Component {
             </ul>
           </div>
 
-          <div>
+          <div class='goals-and-pens'>
             <div>
               <h3>team a goals</h3>
                 <ol>
@@ -129,7 +129,7 @@ class GameSheet extends Component {
             </div>
           </div>
 
-          <div>
+          <div class='goals-and-pens'>
             <div>
               <h3>team b goals</h3>
               <ol>
@@ -148,7 +148,7 @@ class GameSheet extends Component {
             </div>
           </div>
 
-          <div>
+          <div class='roster'>
             <h3>roster team b</h3>
               <ul>
                 <li>player</li>

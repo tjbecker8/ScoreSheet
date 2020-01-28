@@ -1,17 +1,27 @@
 #container {
-
   margin: 30px;
 }
 
 .flex-top {
   display: flex;
   background-color: green;
+  text-align: center;
+}
+
+.team-name-top {
+  width: calc(40%)
+}
+
+.vs {
+  width: calc(20%)
 }
 
 .team-buttons {
   background-color: blue;
   display: flex;
   flex-direction: column;
+  width: calc(30%);
+  text-align: center;
 }
 
 .main-bar {
@@ -22,13 +32,49 @@
 .goalies {
   display: flex;
   background-color: teal;
+  text-align: center;
 }
+
 
 .center-main {
   background-color: yellow;
+  width: calc(40%);
+  text-align: center;
 }
 
 .bottom-main {
   background-color: darksalmon;
   display: flex;
+  text-align: center;
+}
+
+.goalie {
+  text-align: center;
+  width: calc(50%)
+}
+
+.roster {
+  width: calc(30%);
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.goals-and-pens {
+  width: calc(20%);
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.goal-div {
+  border-color: 'black';
+  border-width: 1px;
+  border-style: solid;
+  background-color: salmon;
+  height: calc(33%);
+}
+
+.goal-div:hover {
+  background-color: pink;
 }
