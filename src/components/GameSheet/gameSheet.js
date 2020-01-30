@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './gameSheet.css'
 import Skater from './skater'
 import Goal from './goal'
+import Penalty from './peanlty'
 
 class GameSheet extends Component {
 
@@ -125,6 +126,26 @@ class GameSheet extends Component {
           <div class='goals-and-pens'>
             <div>
               <h3>team a goals</h3>
+              <div class='goal-table-key'>
+                <div class='bord-r-tab'>
+                  <p class='vert'>Period</p>
+                </div>
+                <div class='bord-r-tab'>
+                  <p class='vert'>T.O.G.</p>
+                </div>
+                <div class='bord-r-tab'>
+                  <p class='vert'>Scorer</p>
+                </div>
+                <div class='bord-r-tab'>
+                  <p class='vert'>1st Assist</p>
+                </div>
+                <div class='bord-r-tab'>
+                  <p class='vert'>2nd Assist</p>
+                </div>
+                <div class='bord-r-tab'>
+                  <p class='vert'>notes</p>
+                </div>
+              </div>
                 <ol>
                   <Goal />
                   <li>goal</li>
@@ -134,7 +155,7 @@ class GameSheet extends Component {
             <div>
               <h3>team a peanlties</h3>
                 <ol>
-                  <li>peanlty</li>
+                  <Penalty />
                   <li>penalty</li>
                   <li>penalty</li>
                 </ol>

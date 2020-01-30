@@ -85,3 +85,21 @@ ul,li, ol {
 .goal-div:hover {
   background-color: pink;
 }
+
+.goal-table-key {
+  display: flex;
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+  width: calc(90%);
+  margin-left: 5%;
+}
+
+.vert {
+
+}
+
+.bord-r-tab {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
