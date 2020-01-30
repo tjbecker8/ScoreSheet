@@ -72,6 +72,7 @@ ul,li, ol {
   border-color: black;
   border-width: 1px;
   border-style: solid;
+  background-color: khaki;
 }
 
 .goal-div {
@@ -100,6 +101,9 @@ ul,li, ol {
 }
 
 .bord-r-tab {
+
   writing-mode: vertical-rl;
   text-orientation: mixed;
+  background-color: cyan;
+
 }
