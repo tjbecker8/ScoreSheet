@@ -1,0 +1,28 @@
+.newGoalDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.pointdropdown {
+
+}
+
+.newGoalP {
+  justify-content: center;
+  align-self: center;
+  font-size: 20px;
+}
+
+.newGoalButton {
+
+}
+
+.newGoalDivButton {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
