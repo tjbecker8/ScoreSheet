@@ -5,6 +5,7 @@ import Goal from './goal'
 import Penalty from './peanlty'
 
 import NewGoal from '../NewEvent/newGoal'
+import NewPenalty from '../NewEvent/newPenalty'
 
 class GameSheet extends Component {
 
@@ -16,8 +17,12 @@ class GameSheet extends Component {
     return (
       <div id='container'>
 
-        <div class='popup'>
+        <div class='popup goalpopup'>
           <NewGoal />
+        </div>
+
+        <div class='popup penaltypopup'>
+          <NewPenalty />
         </div>
 
 
