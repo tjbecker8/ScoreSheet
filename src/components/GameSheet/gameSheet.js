@@ -4,6 +4,8 @@ import Skater from './skater'
 import Goal from './goal'
 import Penalty from './peanlty'
 
+import NewGoal from '../NewEvent/newGoal'
+
 class GameSheet extends Component {
 
   state = {
@@ -13,6 +15,10 @@ class GameSheet extends Component {
   render () {
     return (
       <div id='container'>
+
+        <div class='popup'>
+          <NewGoal />
+        </div>
 
 
         <div class='flex-top'>
@@ -127,22 +133,25 @@ class GameSheet extends Component {
             <div>
               <h3>team a goals</h3>
               <div class='goal-table-key'>
-                <div class='bord-r-tab'>
+                <div class='bord-r-tab goalnum'>
+                  <p class='vert'>#</p>
+                </div>
+                <div class='bord-r-tab period'>
                   <p class='vert'>Period</p>
                 </div>
-                <div class='bord-r-tab'>
+                <div class='bord-r-tab tog'>
                   <p class='vert'>T.O.G.</p>
                 </div>
-                <div class='bord-r-tab'>
+                <div class='bord-r-tab scorer'>
                   <p class='vert'>Scorer</p>
                 </div>
-                <div class='bord-r-tab'>
+                <div class='bord-r-tab assist'>
                   <p class='vert'>1st Assist</p>
                 </div>
-                <div class='bord-r-tab'>
+                <div class='bord-r-tab assist'>
                   <p class='vert'>2nd Assist</p>
                 </div>
-                <div class='bord-r-tab'>
+                <div class='bord-r-tab notes'>
                   <p class='vert'>notes</p>
                 </div>
               </div>

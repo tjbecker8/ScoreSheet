@@ -96,14 +96,56 @@ ul,li, ol {
   margin-left: 5%;
 }
 
+
+
 .vert {
+  border-right: 1px solid black;
+  text-align: center;
+}
+
+.goalnum {
+  flex: 2
+}
+
+.period {
+  flex: 3;
+}
+
+.tog {
+  flex: 5;
+}
+
+.scorer {
+  flex: 2.5;
+}
+
+.assist {
+  flex: 2.5;
+}
+
+.notes {
+  flex: 6.8;
 
 }
 
 .bord-r-tab {
-
   writing-mode: vertical-rl;
-  text-orientation: mixed;
+  text-combine-upright: digits 2;
   background-color: cyan;
+  justify-content: center;
+  align-content: center;
+  margin: 10;
+}
 
+.popup {
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  background-color: red;
+  z-index: 1;
+  border: 2px solid black;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }
