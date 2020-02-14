@@ -20,38 +20,38 @@ class NewGoal extends Component {
       <div>
         <p>Goal for Team A</p>
 
-        <div class="newGoalDiv">
-          <p class="newGoalP" >Scored By:</p>
-          <Select class="pointdropdown" options={techCompanies} onChange={(values) => this.setValues(values)} />
+        <div className="newGoalDiv">
+          <p className="newGoalP" >Scored By:</p>
+          <Select className="pointdropdown" options={techCompanies} onChange={(values) => this.setValues(values)} />
         </div>
 
-        <div class="newGoalDiv">
-          <p class="newGoalP" >Assist #1:</p>
+        <div className="newGoalDiv">
+          <p className="newGoalP" >Assist #1:</p>
           <Select options={techCompanies} onChange={(values) => this.setValues(values)} />
         </div>
 
-        <div class="newGoalDiv">
-          <p class="newGoalP" >Assist #2:</p>
+        <div className="newGoalDiv">
+          <p className="newGoalP" >Assist #2:</p>
           <Select options={techCompanies} onChange={(values) => this.setValues(values)} />
         </div>
 
-        <div class="newGoalDiv">
-          <p class="newGoalP" >Period:</p>
+        <div className="newGoalDiv">
+          <p className="newGoalP" >Period:</p>
           <Select options={techCompanies} onChange={(values) => this.setValues(values)} />
         </div>
 
-        <div class="newGoalDiv">
-          <p class="newGoalP" >Time of Goal on Clock:</p>
+        <div className="newGoalDiv">
+          <p className="newGoalP" >Time of Goal on Clock:</p>
           <input type="number" max="20" /> : <input type="number" max="60" />
         </div>
 
-        <div class="newGoalDiv">
-          <p class="newGoalP" >Notes:</p>
+        <div className="newGoalDiv">
+          <p className="newGoalP" >Notes:</p>
           <Select options={techCompanies} onChange={(values) => this.setValues(values)} />
         </div>
 
-        <div class="newGoalDivButton" >
-         <button class="newGoalButton" type="button">Submit</button>
+        <div className="newGoalDivButton" >
+         <button className="newGoalButton" type="button">Submit</button>
         </div>
 
       </div>

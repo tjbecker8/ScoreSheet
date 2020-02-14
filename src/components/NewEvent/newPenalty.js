@@ -31,7 +31,7 @@ class NewPenalty extends Component {
         <p>Time on Clock:</p>
         <input type="number" max="20" /> : <input type="number" max="60" />
 
-        <button class="newPenaltyButton" type="button">Submit</button>
+        <button className="newPenaltyButton" type="button">Submit</button>
 
       </div>
     )

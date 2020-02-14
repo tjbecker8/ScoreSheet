@@ -17,25 +17,25 @@ class GameSheet extends Component {
     return (
       <div id='container'>
 
-        <div class='popup goalpopup'>
+        <div className='popup goalpopup'>
           <NewGoal />
         </div>
 
-        <div class='popup penaltypopup'>
+        <div className='popup penaltypopup'>
           <NewPenalty />
         </div>
 
 
-        <div class='flex-top'>
-          <div class='team-name-top'>
+        <div className='flex-top'>
+          <div className='team-name-top'>
             <h1>Team a</h1>
           </div>
 
-          <div class='vs'>
+          <div className='vs'>
             <h1>VS</h1>
           </div>
 
-          <div class='team-name-top'>
+          <div className='team-name-top'>
             <h1>Team b</h1>
           </div>
         </div>
@@ -43,28 +43,28 @@ class GameSheet extends Component {
 
 
 
-        <div class='main-bar'>
-          <div class='team-buttons'>
-            <div class='goal-div'>
+        <div className='main-bar'>
+          <div className='team-buttons'>
+            <div className='goal-div'>
               <span>
                 <h2>Goal team a</h2>
               </span>
             </div>
 
-            <div class='goal-div'>
+            <div className='goal-div'>
               <span>
                 <h2>Peanlty team a</h2>
               </span>
             </div>
 
-            <div class='goal-div'>
+            <div className='goal-div'>
               <span>
                 <h2>save team a</h2>
               </span>
             </div>
           </div>
 
-          <div class='center-main'>
+          <div className='center-main'>
             <div>
               <h3>league name</h3>
             </div>
@@ -76,29 +76,29 @@ class GameSheet extends Component {
               <h1> 0 - 0 </h1>
             </div>
 
-            <div class='goalies'>
-              <div class='goalie'>
+            <div className='goalies'>
+              <div className='goalie'>
                 <h3>team a goalie</h3>
                 <h4>goalie stats</h4>
               </div>
 
-              <div class='goalie'>
+              <div className='goalie'>
                 <h3>team b goalie</h3>
                 <h4>goalie stats</h4>
               </div>
             </div>
           </div>
 
-          <div class='team-buttons'>
-            <div class='goal-div'>
+          <div className='team-buttons'>
+            <div className='goal-div'>
               <h2>Goal taem b</h2>
             </div>
 
-            <div class='goal-div'>
+            <div className='goal-div'>
               <h2>Peanlty team b</h2>
             </div>
 
-            <div class='goal-div'>
+            <div className='goal-div'>
               <h2>save team b</h2>
             </div>
           </div>
@@ -107,8 +107,8 @@ class GameSheet extends Component {
 
 
 
-        <div class='bottom-main'>
-          <div class='roster'>
+        <div className='bottom-main'>
+          <div className='roster'>
             <h3>Roster team a</h3>
             <ul>
               <Skater />
@@ -134,30 +134,30 @@ class GameSheet extends Component {
             </ul>
           </div>
 
-          <div class='goals-and-pens'>
+          <div className='goals-and-pens'>
             <div>
               <h3>team a goals</h3>
-              <div class='goal-table-key'>
-                <div class='bord-r-tab goalnum'>
-                  <p class='vert'>#</p>
+              <div className='goal-table-key'>
+                <div className='bord-r-tab goalnum'>
+                  <p className='vert'>#</p>
                 </div>
-                <div class='bord-r-tab period'>
-                  <p class='vert'>Period</p>
+                <div className='bord-r-tab period'>
+                  <p className='vert'>Period</p>
                 </div>
-                <div class='bord-r-tab tog'>
-                  <p class='vert'>T.O.G.</p>
+                <div className='bord-r-tab tog'>
+                  <p className='vert'>T.O.G.</p>
                 </div>
-                <div class='bord-r-tab scorer'>
-                  <p class='vert'>Scorer</p>
+                <div className='bord-r-tab scorer'>
+                  <p className='vert'>Scorer</p>
                 </div>
-                <div class='bord-r-tab assist'>
-                  <p class='vert'>1st Assist</p>
+                <div className='bord-r-tab assist'>
+                  <p className='vert'>1st Assist</p>
                 </div>
-                <div class='bord-r-tab assist'>
-                  <p class='vert'>2nd Assist</p>
+                <div className='bord-r-tab assist'>
+                  <p className='vert'>2nd Assist</p>
                 </div>
-                <div class='bord-r-tab notes'>
-                  <p class='vert'>notes</p>
+                <div className='bord-r-tab notes'>
+                  <p className='vert'>notes</p>
                 </div>
               </div>
                 <ol>
@@ -176,7 +176,7 @@ class GameSheet extends Component {
             </div>
           </div>
 
-          <div class='goals-and-pens'>
+          <div className='goals-and-pens'>
             <div>
               <h3>team b goals</h3>
               <ol>
@@ -195,7 +195,7 @@ class GameSheet extends Component {
             </div>
           </div>
 
-          <div class='roster'>
+          <div className='roster'>
             <h3>roster team b</h3>
               <ul>
                 <Skater />

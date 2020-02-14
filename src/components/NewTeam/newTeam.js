@@ -4,9 +4,9 @@ import './newTeam.css'
 class NewTeam extends Component {
   render () {
     return (
-      <div class='newTeamContainer'>
+      <div className='newTeamContainer'>
         <p>Create New Team</p>
-        
+
         <div>
           <p>League: </p>
           <input type="text" />

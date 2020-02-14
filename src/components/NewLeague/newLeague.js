@@ -3,16 +3,23 @@ import './newLeague.css'
 import fire from '../../fire'
 
 import firebase from 'firebase'
+import "firebase/firestore"
 
 class NewLeague extends Component {
 
 createLeague = () => {
-  
+  var leagueRef = fire.collection("leagues").doc()
+
+  leagueRef.set({
+    league_name: 'test',
+    creator: '123',
+  })
+  console.log(leagueRef.id);
 }
 
   render () {
     return (
-      <div class="newLeagueContainer">
+      <div className="newLeagueContainer">
         <p>New League</p>
 
         <div>

@@ -17,12 +17,12 @@ class NewPlayer extends Component {
 
   render () {
     return (
-      <div class='newPlayerContainer'>
+      <div className='newPlayerContainer'>
         <p>New Player</p>
 
         <div>
           <p>Team:</p>
-          <Select class="pointdropdown" options={techCompanies} onChange={(values) => this.setValues(values)} />
+          <Select className="pointdropdown" options={techCompanies} onChange={(values) => this.setValues(values)} />
         </div>
 
         <div>

@@ -6,12 +6,12 @@ class Skater extends Component {
   render () {
 
     return (
-      <li class='player-li'>
-        <div class='number'>
-          <p class='p-num-name'>00</p>
+      <li className='player-li'>
+        <div className='number'>
+          <p className='p-num-name'>00</p>
         </div>
-        <div class='name'>
-          <p class='p-num-name'>last, first</p>
+        <div className='name'>
+          <p className='p-num-name'>last, first</p>
         </div>
       </li>
     )
