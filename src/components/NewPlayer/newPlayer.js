@@ -17,7 +17,7 @@ class NewPlayer extends Component {
 
   render () {
     return (
-      <div>
+      <div class='newPlayerContainer'>
         <p>New Player</p>
 
         <div>
@@ -45,6 +45,7 @@ class NewPlayer extends Component {
           <input type='text' />
         </div>
 
+        <button type='button'>Add New Player</button>
 
       </div>
 
