@@ -18,10 +18,11 @@ createLeague = () => {
   var leagueRef = database.collection("leagues").doc()
 
   leagueRef.set({
-    league_name: 'test',
+    league_name: this.state.leagueName,
     creator: '123',
   })
   console.log(leagueRef.id);
+  this.setState({leagueName: ''})
 }
 
 leagueNameSet = (e) => {
@@ -36,7 +37,7 @@ leagueNameSet = (e) => {
 
         <div>
           <p>League Name</p>
-          <input type='text' onChange={(value)=>{this.leagueNameSet(value)}} />
+          <input type='text' onChange={(value)=>{this.leagueNameSet(value)}} value={this.state.leagueName} />
         </div>
 
         <button type="button" onClick={this.createLeague} >Create League</button>

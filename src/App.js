@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div>
-      <NewLeague />
+      <NewPlayer />
 
     </div>
   );
