@@ -2,9 +2,13 @@ import React, {Component} from 'react';
 import './newLeague.css'
 import fire from '../../fire'
 
+import firebase from 'firebase'
+
 class NewLeague extends Component {
 
-
+createLeague = () => {
+  
+}
 
   render () {
     return (
@@ -16,7 +20,7 @@ class NewLeague extends Component {
           <input type='text' />
         </div>
 
-        <button type="button" >Create League</button>
+        <button type="button" onClick={this.createLeague} >Create League</button>
       </div>
     )
   }
