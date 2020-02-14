@@ -5,14 +5,14 @@ import GameSheet from './components/GameSheet/gameSheet'
 
 import NewTeam from './components/NewTeam/newTeam'
 import NewPlayer from './components/NewPlayer/newPlayer'
-
+import NewLeague from './components/NewLeague/newLeague'
 
 
 
 function App() {
   return (
     <div>
-      <NewPlayer />
+      <NewLeague />
 
     </div>
   );
