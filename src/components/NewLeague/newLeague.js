@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './newLeague.css'
-import fire from '../../fire'
+import Fire from '../../fire'
 
 import firebase from 'firebase'
 import "firebase/firestore"
@@ -8,7 +8,7 @@ import "firebase/firestore"
 class NewLeague extends Component {
 
 createLeague = () => {
-  var leagueRef = fire.collection("leagues").doc()
+  var leagueRef = Fire.database().collection("leagues").doc()
 
   leagueRef.set({
     league_name: 'test',
@@ -18,6 +18,7 @@ createLeague = () => {
 }
 
   render () {
+    
     return (
       <div className="newLeagueContainer">
         <p>New League</p>
