@@ -7,12 +7,12 @@
 
 }
 
-p {
+/* p {
   text-align: center;
   margin:0;
   padding: 0;
 
-}
+} */
 
 .number {
   border-right: black;
@@ -33,4 +33,7 @@ p {
 .p-num-name {
   font-size: 14px;
   margin: 8px;
+  text-align: center;
+  margin:0;
+  padding: 0;
 }
