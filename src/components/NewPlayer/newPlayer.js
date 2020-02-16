@@ -41,7 +41,7 @@ componentDidMount(){
         let data = doc.data();
         this.state.teams.push({label: data.team_name, id: doc.id, value: doc.id })
       });
-
+      this.setState({teamLoaded: true})
     })
   }
 

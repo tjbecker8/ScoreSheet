@@ -23,8 +23,15 @@ class NewGame extends Component {
    super(props);
    this.state = {
      date: new Date(),
-     teams: null,
+     teams: [],
+     homeTeam: null,
+     awayTeam: null,
+     location: null,
    };
+ }
+
+ componentDidMount(){
+   this.getTeams()
  }
 
  onChangeTime=(t)=>{
@@ -33,6 +40,17 @@ class NewGame extends Component {
 
  onChangeDate=(d)=>{
    this.setState({date: d})
+ }
+
+ getTeams =()=> {
+   var teamRef = database.collection("teams")
+   teamRef.get().then((querySnapshot)=> {
+     querySnapshot.forEach((doc) => {
+       let data = doc.data();
+       this.state.teams.push({label: data.team_name, id: doc.id, value: doc.id })
+     });
+     this.setState({teamLoaded: true})
+   })
  }
 
 
