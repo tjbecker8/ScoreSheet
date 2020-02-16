@@ -3,11 +3,8 @@ import firebase from 'firebase';
 import "firebase/firestore"
 
 import './App.css';
-import GameSheet from './components/GameSheet/gameSheet'
 
-import NewTeam from './components/NewTeam/newTeam'
-import NewPlayer from './components/NewPlayer/newPlayer'
-import NewLeague from './components/NewLeague/newLeague'
+import LeagueLanding from './components/LeagueLanding/leagueLanding'
 
 firebase.initializeApp({
   apiKey: process.env.REACT_APP_API_KEY,
@@ -29,10 +26,8 @@ function App() {
 
 
   return (
-    <div>
-      <NewPlayer />
-
-    </div>
+    
+      <LeagueLanding />
   );
 }
 
