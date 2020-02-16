@@ -27,6 +27,7 @@ class NewGame extends Component {
      homeTeam: null,
      awayTeam: null,
      location: null,
+     league: ""
    };
  }
 
@@ -53,6 +54,53 @@ class NewGame extends Component {
    })
  }
 
+setLocation=(v)=>{
+  this.setState({location: v})
+}
+
+setHomeTeam=(v)=>{
+  this.setState({homeTeam: v})
+}
+
+setAwayTeam=(v)=>{
+  this.setState({awayTeam: v})
+}
+
+createGame=()=>{
+  if (!this.state.homeTeam || !this.state.awayTeam || !this.state.location) {
+    alert('Please make sure all fields are filled in')
+  } else {
+    var gameRef = database.collection("games").doc()
+
+    gameRef.set({
+      home_team: this.state.homeTeam,
+      away_team: this.state.awayTeam,
+      location: this.state.location,
+      league: this.state.league,
+      date_time: this.state.date,
+    })
+    var leagueRef = database.collection("leagues").doc(this.state.league).collection('games').doc(gameRef.id)
+
+    leagueRef.set({
+      game_id: gameRef.id,
+    })
+
+    var gameRef = database.collection("teams")
+
+    gameRef.doc(this.state.homeTeam).collection('games').doc(gameRef.id).set({
+      game_id: gameRef.id,
+    })
+
+    gameRef.doc(this.state.awayTeam).collection('games').doc(gameRef.id).set({
+      game_id: gameRef.id,
+    })
+
+    var rinkRef = database.collection('rinks').doc(this.state.location).collection("games").doc(gameRef.Id)
+      rinkRef.set({
+        game_id: gameRef.id
+      })
+  }
+}
 
   render () {
     console.log('timestate', this.state);
@@ -63,17 +111,17 @@ class NewGame extends Component {
         </div>
         <div>
           <p>Location</p>
-          <Select options={rinks} onChange={(values) => this.setValues(values)} />
+          <Select options={rinks} onChange={(values) => this.setLocation(values)} />
         </div>
 
         <div>
           <p>Home Team</p>
-          <Select options={this.state.teams} onChange={(values) => this.setValues(values)} />
+          <Select options={this.state.teams} onChange={(values) => this.setHomeTeam(values)} />
         </div>
 
         <div>
           <p>Away Team</p>
-          <Select options={this.state.teams} onChange={(values) => this.setValues(values)} />
+          <Select options={this.state.teams} onChange={(values) => this.setAwayTeam(values)} />
         </div>
 
         <div>
@@ -83,9 +131,10 @@ class NewGame extends Component {
               onChange={(date) => this.onChangeDate(date)}
               disableClock={true}
               />
+        </div>
 
-
-
+        <div>
+          <button type='button' onClick={this.createGame}>Create Game</button>
         </div>
       </div>
     )
