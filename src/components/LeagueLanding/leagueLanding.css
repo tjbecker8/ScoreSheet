@@ -1,4 +1,9 @@
-#league-land-container {
-  background-color: red;
-  margin: 50;
+.league-title-div {
+  background-color: dodgerblue;
+}
+
+.league-title-p {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
 }

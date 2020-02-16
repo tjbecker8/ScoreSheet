@@ -8,6 +8,8 @@ import GameSheet from './components/GameSheet/gameSheet'
 
 import NewTeam from './components/NewTeam/newTeam'
 import NewPlayer from './components/NewPlayer/newPlayer'
+import LeagueLanding from './components/LeagueLanding/leagueLanding'
+import NewGame from './components/NewGame/newGame'
 
 
 
@@ -21,7 +23,11 @@ class Routes extends Component {
         <Route path="/newleague" component={NewLeague} />
         <Route path="/newteam" component={NewTeam} />
         <Route path="/newplayer" component={NewPlayer} />
-        <Route path="/gamesheet" comonent={GameSheet} />
+        <Route path="/game" component={GameSheet} />
+        <Route path="/league" component={LeagueLanding} />
+        <Route path="/newgame" component={NewGame} />
+
+
 
         <Route path="/" component={App} />
 

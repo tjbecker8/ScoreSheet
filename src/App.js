@@ -26,8 +26,11 @@ function App() {
 
 
   return (
-    
-      <LeagueLanding />
+
+      <div>
+        <p>this is the app page</p>
+        <p>available routes on routes page</p>
+      </div>
   );
 }
 
