@@ -4,7 +4,6 @@ import "firebase/firestore"
 
 import './App.css';
 
-import LeagueLanding from './components/LeagueLanding/leagueLanding'
 
 firebase.initializeApp({
   apiKey: process.env.REACT_APP_API_KEY,

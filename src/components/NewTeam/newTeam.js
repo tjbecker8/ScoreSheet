@@ -18,7 +18,7 @@ class NewTeam extends Component {
    super(props);
    this.state = {
      leagues: [],
-     teamName: null,
+     teamName: '',
      selectedLeague: null,
    };
  }
@@ -47,7 +47,7 @@ teamNameSet=(e)=>{
 }
 
 createTeam=()=>{
-  if (!this.state.teamName) {
+  if (this.state.teamName === '') {
     alert("Team Name can't be blank")
   } else if (!this.state.selectedLeague) {
     alert('you must select a league')
@@ -64,7 +64,7 @@ createTeam=()=>{
         name: this.state.teamName
       })
       this.setState({
-        teamName: null,
+        teamName: '',
         selectedLeague: null,
       })
   }
@@ -90,7 +90,7 @@ createTeam=()=>{
 
         <div>
           <p>Team Name:</p>
-          <input type="text" onChange={(value)=>{this.teamNameSet(value)}} />
+          <input type="text" onChange={(value)=>{this.teamNameSet(value)}} value={this.state.teamName} />
         </div>
 
         <button type="button" onClick={this.createTeam}>Create Team</button>
