@@ -20,12 +20,11 @@ class NewPlayer extends Component {
    super(props);
    this.state = {
      teams: [],
-     firstName: null,
-     lastName: null,
-     number: null,
-     position: null,
-     team: null,
-
+     firstName: '',
+     lastName: '',
+     number: '',
+     position: '',
+     team: '',
    };
  }
 
@@ -66,7 +65,7 @@ componentDidMount(){
   }
 
 
-//will need function to check duplicate numbers at some point
+//will need function to check duplicate numbers at some point, also need to find out what league
   createPlayer=()=>{
     if (!this.state.firstName || !this.state.lastName || !this.state.number || !this.state.position || !this.state.team) {
       alert('please make sure all fields are filled in')
@@ -80,10 +79,17 @@ componentDidMount(){
         position: this.state.position[0].label,
         team: this.state.team[0].id,
       })
-      var teamRef = document.collection('teams').doc(this.state.team[0].id).collection('players').doc(playerRef.id)
+      var teamRef = database.collection('teams').doc(this.state.team[0].id).collection('players').doc(playerRef.id)
       teamRef.set({
         id: playerRef.id,
         number: this.state.number,
+      })
+      this.setState({
+        firstName: '',
+        lastName: '',
+        number: '',
+        position: '',
+        team: '',
       })
     }
   }
@@ -101,17 +107,17 @@ componentDidMount(){
 
         <div>
           <p>First Name:</p>
-          <input type='text' />
+          <input type='text' value={this.state.firstName} onChange={(values) => this.setFirstName(values)} />
         </div>
 
         <div>
           <p>Last Name:</p>
-          <input type='text' />
+          <input type='text' value={this.state.lastName} onChange={(values) => this.setLastName(values)} />
         </div>
 
         <div>
           <p>Number:</p>
-          <input type='text' />
+          <input type='text' value={this.state.number} onChange={(values) => this.setNumber(values)} />
         </div>
 
         <div>
