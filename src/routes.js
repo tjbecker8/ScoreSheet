@@ -10,6 +10,7 @@ import NewTeam from './components/NewTeam/newTeam'
 import NewPlayer from './components/NewPlayer/newPlayer'
 import LeagueLanding from './components/LeagueLanding/leagueLanding'
 import NewGame from './components/NewGame/newGame'
+import NewRink from './components/NewRink/newRink'
 
 
 
@@ -26,6 +27,7 @@ class Routes extends Component {
         <Route path="/game" component={GameSheet} />
         <Route path="/league" component={LeagueLanding} />
         <Route path="/newgame" component={NewGame} />
+        <Route path="/newrink" component={NewRink} />
 
 
 

@@ -27,12 +27,14 @@ class NewGame extends Component {
      homeTeam: null,
      awayTeam: null,
      location: null,
-     league: ""
+     league: "VM83UoFvyDlgPNaM84Co",
+     rinks: [],
    };
  }
 
  componentDidMount(){
    this.getTeams()
+   this.getRinks()
  }
 
  onChangeTime=(t)=>{
@@ -43,6 +45,7 @@ class NewGame extends Component {
    this.setState({date: d})
  }
 
+//will need to fix to get list from league document collection
  getTeams =()=> {
    var teamRef = database.collection("teams")
    teamRef.get().then((querySnapshot)=> {
@@ -54,8 +57,21 @@ class NewGame extends Component {
    })
  }
 
+ getRinks=()=>{
+   var rinkRef = database.collection('rinks')
+   rinkRef.get().then((info) => {
+     info.forEach((doc) => {
+       let data = doc.data()
+       console.log('rink data', data);
+       this.state.rinks.push({label: data.name, id: doc.id, value: doc.id})
+     })
+     this.setState({rinksLoaded: true})
+   })
+ }
+
 setLocation=(v)=>{
   this.setState({location: v})
+
 }
 
 setHomeTeam=(v)=>{
@@ -65,6 +81,9 @@ setHomeTeam=(v)=>{
 setAwayTeam=(v)=>{
   this.setState({awayTeam: v})
 }
+
+
+
 
 createGame=()=>{
   if (!this.state.homeTeam || !this.state.awayTeam || !this.state.location) {
@@ -80,6 +99,7 @@ createGame=()=>{
       date_time: this.state.date,
     })
     var leagueRef = database.collection("leagues").doc(this.state.league).collection('games').doc(gameRef.id)
+    console.log('gameref', gameRef.id);
 
     leagueRef.set({
       game_id: gameRef.id,
@@ -87,16 +107,16 @@ createGame=()=>{
 
     var gameRef = database.collection("teams")
 
-    gameRef.doc(this.state.homeTeam).collection('games').doc(gameRef.id).set({
+    gameRef.doc(this.state.homeTeam[0].id).collection('games').doc(gameRef.id).set({
       game_id: gameRef.id,
     })
 
-    gameRef.doc(this.state.awayTeam).collection('games').doc(gameRef.id).set({
+    gameRef.doc(this.state.awayTeam[0].id).collection('games').doc(gameRef.id).set({
       game_id: gameRef.id,
     })
 
-    var rinkRef = database.collection('rinks').doc(this.state.location).collection("games").doc(gameRef.Id)
-      rinkRef.set({
+    var rinkRef = database.collection('rinks')
+      rinkRef.doc(this.state.location[0].id).collection("games").doc(gameRef.id).set({
         game_id: gameRef.id
       })
   }
@@ -104,6 +124,7 @@ createGame=()=>{
 
   render () {
     console.log('timestate', this.state);
+
     return (
       <div id='container'>
         <div>
@@ -111,7 +132,7 @@ createGame=()=>{
         </div>
         <div>
           <p>Location</p>
-          <Select options={rinks} onChange={(values) => this.setLocation(values)} />
+          <Select options={this.state.rinks} onChange={(values) => this.setLocation(values)} />
         </div>
 
         <div>
@@ -135,6 +156,7 @@ createGame=()=>{
 
         <div>
           <button type='button' onClick={this.createGame}>Create Game</button>
+        
         </div>
       </div>
     )

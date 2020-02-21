@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 
 import { database } from '../../App';
 
-class NewTeam extends Component {
+class NewRink extends Component {
 
   constructor(props){
    super(props);
@@ -13,18 +13,19 @@ class NewTeam extends Component {
  }
 
  rinkSet=(v)=>{
-   this.setState({rink: v})
+   this.setState({rink: v.target.value})
  }
 
  setRink=()=>{
    var rinkRef = database.collection('rinks').doc()
-
    rinkRef.set({
      name: this.state.rink
    })
+   this.setState({rink: ''})
  }
 
   render () {
+    console.log(this.state.rink);
     return(
       <div>
         <p>Add New Rink</p>
@@ -34,3 +35,4 @@ class NewTeam extends Component {
     )
   }
 }
+export default NewRink
